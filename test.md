@@ -1,7 +1,11 @@
-year = int(input())
+a = int(input())
 
-if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
-    print("Високосный")
+b = int(input())
 
-else:
-    print("Обычный")
+c = int(input())
+
+p = (a + b + c)/2
+
+s = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+
+print(s)
