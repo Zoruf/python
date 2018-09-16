@@ -1,30 +1,19 @@
-type = input()
+n = int(input())
 
-if type == "треугольник":
-    a = float(input())
+if n % 10 == 0 or (n % 10 >= 5 and n % 10 <= 9):
+    end = "ов"
 
-    b = float(input())
+elif n % 10 ==1:
+    end = ""
 
-    c = float(input())
+elif n % 10 > 1 and n % 10 < 5:
+    end = "а"
 
-    p = (a + b + c) / 2
+elif n > 21 and n < 10:
+    end = "ов"
 
-    s = (p * (p-a) * (p - b) * (p-c)) ** 0.5
+prog = " программист" + end
 
-    print(s)
+result = str(n) + prog
 
-
-elif type == "прямоугольник":
-    a = float(input())
-
-    b = float(input())
-
-    print(a * b)
-
-elif type == "круг":
-    r = float(input())
-
-    print(3.14 * (r ** 2) )
-
-else:
-    print("Нет такого типа квартир")
+print(result)
