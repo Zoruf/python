@@ -1,11 +1,35 @@
-a = int(input())
+a = float(input())
 
-b = int(input())
+b = float(input())
 
-c = int(input())
+op = input()
 
-p = (a + b + c)/2
+if op == "mod":
+    if b != 0:
+        print(a % b)
+    else:
+        print("Деление на ноль!")
 
-s = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+elif op == "pow":
+    print(a ** b)
 
-print(s)
+elif op == "div":
+    if b != 0:
+        print(a // b)
+    else:
+        print("Деление на ноль!")
+
+elif op == "+":
+    print(a+b)
+
+elif op == "-":
+    print(a - b)
+
+elif op == "/":
+    if b != 0:
+        print(a / b)
+    else:
+        print("Деление на ноль!")
+
+elif op == "*":
+    print(a * b)
