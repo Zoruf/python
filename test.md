@@ -1,19 +1,7 @@
-a = int(input())
+year = int(input())
 
-b = int(input())
-
-h = int(input())
-
-if a <= b:
-
-    if h < a:
-        print("Недосып")
-
-    elif h > b:
-        print("Пересып")
-
-    else:
-        print("Это номально")
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+    print("Високосный")
 
 else:
-    print("Fuck you")
+    print("Обычный")
