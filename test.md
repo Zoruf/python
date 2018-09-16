@@ -1,35 +1,30 @@
-a = float(input())
+type = input()
 
-b = float(input())
+if type == "треугольник":
+    a = float(input())
 
-op = input()
+    b = float(input())
 
-if op == "mod":
-    if b != 0:
-        print(a % b)
-    else:
-        print("Деление на ноль!")
+    c = float(input())
 
-elif op == "pow":
-    print(a ** b)
+    p = (a + b + c) / 2
 
-elif op == "div":
-    if b != 0:
-        print(a // b)
-    else:
-        print("Деление на ноль!")
+    s = (p * (p-a) * (p - b) * (p-c)) ** 0.5
 
-elif op == "+":
-    print(a+b)
+    print(s)
 
-elif op == "-":
-    print(a - b)
 
-elif op == "/":
-    if b != 0:
-        print(a / b)
-    else:
-        print("Деление на ноль!")
+elif type == "прямоугольник":
+    a = float(input())
 
-elif op == "*":
+    b = float(input())
+
     print(a * b)
+
+elif type == "круг":
+    r = float(input())
+
+    print(3.14 * (r ** 2) )
+
+else:
+    print("Нет такого типа квартир")
